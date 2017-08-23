@@ -7,9 +7,17 @@ function Ticket(run, time, age) {
   this.price = "";
 }
 Ticket.prototype.ticketPrice = function() {
-
-  if ()
-    return this.run - this.time - this.age;
+  var startingValue = 100;
+  if (this.run === "2") {
+    startingValue -= 20;
+  }
+  if (this.time === "2") {
+    startingValue -= 20;
+  }
+  if (this.age === "3") {
+    startingValue -= 20;
+  }
+  return startingValue;
 }
 //user interface logic
 $(document).ready(function() {
